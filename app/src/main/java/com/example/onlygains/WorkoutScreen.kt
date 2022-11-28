@@ -35,17 +35,11 @@ fun workoutList(workoutViewModel: WorkoutViewModel,navController: NavController)
 
     Column() {
 
-        TopAppBar(title = { Text("OnlyGains", fontWeight = FontWeight.Bold
-        , fontSize = 25.sp) })
-
-        Spacer(modifier = Modifier.height(40.dp))
 
 
 
 
-
-
-        LazyColumn(modifier = Modifier.fillMaxHeight()) {
+        LazyColumn {
 
             if (state.isEmpty()) {
 
@@ -114,11 +108,7 @@ fun excercises(workoutViewModel: WorkoutViewModel){
     Column() {
         val workout by workoutViewModel.sWorkout.collectAsState()
 
-        TopAppBar(title = { Text("OnlyGains", fontWeight = FontWeight.Bold
-            , fontSize = 25.sp) })
-
-        Spacer(modifier = Modifier.height(40.dp))
-        LazyColumn(modifier = Modifier.fillMaxHeight()) {
+        LazyColumn {
 
             if (workout.id == 0) {
                 item {

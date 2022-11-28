@@ -16,6 +16,7 @@ import androidx.compose.ui.text.input.*
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.*
 import androidx.navigation.NavHostController
+import com.example.onlygains.BottomAppBar.BottomBarScreen
 import com.example.onlygains.ui.theme.*
 
 
@@ -66,7 +67,7 @@ fun LoginPage(navController: NavHostController) {
             Button(
                 onClick = {
                     if (username.equals("salim")){
-                    navController.navigate("h")
+                    navController.navigate(BottomBarScreen.Home.route)
                 } },
                 shape = RoundedCornerShape(50.dp),
                 modifier = Modifier
